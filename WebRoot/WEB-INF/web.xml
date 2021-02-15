@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+ <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <display-name>propertyMngSys</display-name>
+  <servlet>
+    <description>JAX-RS Tools Generated - Do not modify</description>
+    <servlet-name>JAX-RS Servlet</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+    <filter>
+    <filter-name>charEncoding</filter-name>
+    <filter-class>cn.edu.hezeu.pms.filter.CharEncodingFilter</filter-class>
+    <init-param>
+      <param-name>char</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>charEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+    <servlet-name>userManager</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.manager.userManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>showUser</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.show.showUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowFloor</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.show.ShowFloor</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminManager</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.manager.AdminManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowPersonalInfo</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.show.ShowPersonalInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServer</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.manager.LoginServer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ajax</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.ajax.ajax</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowRecycle</servlet-name>
+    <servlet-class>cn.edu.hezeu.pms.show.ShowRecycle</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>JAX-RS Servlet</servlet-name>
+    <url-pattern>/jaxrs/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userManager</servlet-name>
+    <url-pattern>/userManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>showUser</servlet-name>
+    <url-pattern>/showUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowFloor</servlet-name>
+    <url-pattern>/ShowFloor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminManager</servlet-name>
+    <url-pattern>/AdminManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowPersonalInfo</servlet-name>
+    <url-pattern>/ShowPersonalInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServer</servlet-name>
+    <url-pattern>/LoginServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ajax</servlet-name>
+    <url-pattern>/ajax</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowRecycle</servlet-name>
+    <url-pattern>/ShowRecycle</url-pattern>
+  </servlet-mapping>
+</web-app>
